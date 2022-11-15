@@ -20,10 +20,14 @@ public class CtrlMedecin
         cnx = ConnexionBDD.getCnx();
     }
 
-    public ArrayList<String> getAllMedecins()
-    {
-
-        return null;
+    public ArrayList<String> getAllMedecins() throws SQLException {
+        ArrayList<String> lesMedecins = new ArrayList<>();
+        ps = cnx.prepareStatement("select medecin.nomMedecin from medecin");
+        rs = ps.executeQuery();
+        while (rs.next()) {
+            lesMedecins.add(rs.getString(1));
+        }
+        return lesMedecins;
     }
 
     public int getIdMedecinByName(String nomMed)
