@@ -24,13 +24,13 @@ public class CtrlMedicament
 
     public ArrayList<Medicament> GetAllMedicamentsByIdConsultations(int idConsultation) throws SQLException {
         ArrayList<Medicament> lesMedicament = new ArrayList<>();
-        ps = cnx.prepareStatement("Select" +
+        ps = cnx.prepareStatement("Select " +
                 "medicament.idMedoc, " +
                 "medicament.nomMedoc, " +
                 "medicament.prixMedoc as Prix " +
                 "from medicament, prescrire, consultation " +
                 "Where consultation.idConsult = prescrire.numConsult " +
-                "and prescrire.numMedoc = medicament.idMedoc" +
+                "and prescrire.numMedoc = medicament.idMedoc " +
                 "and consultation.idConsult = ?"
         );
         ps.setInt(1, idConsultation);

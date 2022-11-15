@@ -22,8 +22,7 @@ public class CtrlConsultation
 
     public ArrayList<Consultation> GetAllConsultations() throws SQLException {
         ArrayList<Consultation> lesConsultations = new ArrayList<>();
-        ps = cnx.prepareStatement("select " +
-                "consultation.idConsult," +
+        ps = cnx.prepareStatement("select consultation.idConsult," +
                 "consultation.dateConsult," +
                 "patient.nomPatient," +
                 "medecin.nomMedecin," +
