@@ -60,7 +60,7 @@ public class FrmPrescrire extends JFrame
 
 
 //                try {
-//                    for (patient : ctrlPatient.getAllPatients();)
+//                    for (patient : ctrlPatient.getAllPatients())
 //                    {
 //                        cboPatients.addItem(patient);
 //                    }
