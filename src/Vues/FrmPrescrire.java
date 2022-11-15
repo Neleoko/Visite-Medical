@@ -50,6 +50,7 @@ public class FrmPrescrire extends JFrame
 
                 // A vous de jouer
                 ctrlConsultation = new CtrlConsultation();
+                ctrlPatient = new CtrlPatient();
                 try {
                     idConsult = ctrlConsultation.getLastNumberOfConsultation();
                 } catch (SQLException ex) {
@@ -58,14 +59,14 @@ public class FrmPrescrire extends JFrame
                     txtNumeroConsultation.setText(String.valueOf(idConsult));
 
 
-//                try {
-//                    for (String patient : ctrlPatient.getAllPatients())
-//                    {
-//                        cboPatients.addItem(patient);
-//                    }
-//                } catch (SQLException ex) {
-//                    throw new RuntimeException(ex);
-//                }
+                try {
+                    for (String patient : ctrlPatient.getAllPatients())
+                    {
+                        cboPatients.addItem(patient);
+                    }
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
 
 
             }

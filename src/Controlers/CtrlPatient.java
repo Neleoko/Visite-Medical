@@ -23,7 +23,7 @@ public class CtrlPatient
 
     public ArrayList<String> getAllPatients() throws SQLException {
         ArrayList<String> lesPatients = new ArrayList<>();
-        ps = cnx.prepareStatement("select patient.nomPatient");
+        ps = cnx.prepareStatement("select patient.nomPatient from patient");
         rs = ps.executeQuery();
         while (rs.next()) {
             lesPatients.add(rs.getString(1));
