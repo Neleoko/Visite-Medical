@@ -58,9 +58,8 @@ public class FrmPrescrire extends JFrame
                     txtNumeroConsultation.setText(String.valueOf(idConsult));
 
 
-
 //                try {
-//                    for (patient : ctrlPatient.getAllPatients())
+//                    for (String patient : ctrlPatient.getAllPatients())
 //                    {
 //                        cboPatients.addItem(patient);
 //                    }
